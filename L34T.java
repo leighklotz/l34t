@@ -1,4 +1,4 @@
-package com.hipme.software.l34t;
+package org.l4t;
 
 import java.io.StringReader;
 import java.util.Collection;
@@ -30,7 +30,7 @@ import net.sf.saxon.s9api.ItemType;
 import net.sf.saxon.s9api.XdmValue;
 
 public class L34T {
-  public static final String L34T_EXTENSION_FUNCTION_NAMESPACE="http://software.hipme.com/2014/saxon-extension";
+  public static final String L34T_EXTENSION_FUNCTION_NAMESPACE="http://l34t.org/2014/saxon-extension";
 
   final Processor processor;
   final XsltExecutable xsltExecutable;
@@ -51,7 +51,7 @@ public class L34T {
 
   private String createL34TContainer(String xsltPath, Collection<String> variableNames) {
     StringBuilder sb = new StringBuilder();
-    sb.append("<xsl:stylesheet version='2.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform' xmlns:l34t='http://software.hipme.com/2014/saxon-extension' exclude-result-prefixes='l34t'>\n");
+    sb.append("<xsl:stylesheet version='2.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform' xmlns:l34t='http://l34t.org/2014/saxon-extension' exclude-result-prefixes='l34t'>\n");
     {
       for (String name : variableNames) {
         sb.append("<xsl:param name='");
@@ -138,7 +138,7 @@ public class L34T {
 
   public static void main(String[] args) {
     if (args.length < 2) {
-      System.err.println("usage: java cp saxon9he.jar:. com.hipme.software.l34t.L34T xslfile xmlfile [varname vartype varvalue] [varname vartype varvalue] ..");
+      System.err.println("usage: java cp saxon9he.jar:. org.l34t.L34T xslfile xmlfile [varname vartype varvalue] [varname vartype varvalue] ..");
     }
 
     String xsl = args[0];

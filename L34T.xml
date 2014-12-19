@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pizza xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xsl:version="2.0"
-       xmlns:l34t='http://software.hipme.com/2014/saxon-extension' exclude-result-prefixes='l34t'>
+       xmlns:l34t='http://org.l34t/2014/saxon-extension' exclude-result-prefixes='l34t'>
 
   <bar><xsl:value-of select="$pizza" /></bar>
   <foo a="{$x * $x}">x=<xsl:value-of select="$x" /></foo>

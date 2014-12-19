@@ -35,7 +35,7 @@ or, a more complex temlate that also uses access to an XML instance input docume
 
     <?xml version="1.0" encoding="UTF-8"?>
     <pizza xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xsl:version="2.0"
-           xmlns:l34t='http://software.hipme.com/2014/saxon-extension' exclude-result-prefixes='l34t'>
+           xmlns:l34t='http://org.l34t.com/2014/saxon-extension' exclude-result-prefixes='l34t'>
 
       <bar><xsl:value-of select="$pizza" /></bar>
       <foo a="{$x * $x}">x=<xsl:value-of select="$x" /></foo>
@@ -58,7 +58,7 @@ With and the more complex template above and this input document:
       This is the input document.
     </document>
 
-`java com.hipme.software.l34t.L34T L34T.xml instance.xml x int 3 pizza string fred`
+`java org.l34t.L34T L34T.xml instance.xml x int 3 pizza string fred`
 
     <?xml version="1.0" encoding="UTF-8"?>
     <pizza>fred</pizza>
@@ -74,4 +74,5 @@ If you want to add your own extension functions your copy of L34T, Look at https
 
 ----
 (C) 2014 Leigh L. Klotz, Jr.
-http://software.hipme.com/L34T
+http://l34t.org
+
